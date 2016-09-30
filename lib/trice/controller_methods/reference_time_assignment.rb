@@ -19,9 +19,9 @@ module Trice
 
       def determine_requested_at(controller)
         if @stub_configuration.stubbable?(controller)
-          extract_requested_at(controller.request) || Time.now
+          extract_requested_at(controller.request) || Trice::NowTime.get
         else
-          Time.now
+          Trice::NowTime.get
         end
       end
 

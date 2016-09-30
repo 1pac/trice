@@ -5,6 +5,8 @@ require 'pry'
 
 Trice.support_requested_at_stubbing = true
 
+Time.zone = 'Tokyo'
+
 RSpec.configure do |config|
   config.extend Trice::SpecHelper
 end
